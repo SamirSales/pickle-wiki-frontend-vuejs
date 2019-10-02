@@ -1,29 +1,54 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div id="pw-main"> 
+  <div id="pw-header">
+    <div id="pw-header-content">
+      <v-toolbar-side-icon></v-toolbar-side-icon>
     </div>
-    <router-view/>
   </div>
+  <div id="pw-content"></div>
+  <div id="pw-footer"></div>
+</div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#pw-main {
+  width:100%;
+  margin-top:0;
+  margin-left:auto;
+  margin-bottom:0;
+  margin-right:auto;
+  background-color:#666;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+#pw-header {
+  width:100%;
+  height:54px;
+  background-color:#eaecf0;
+  box-shadow: inset 0 -1px 3px rgba(0,0,0,0.08);
+  float: bottom;
 }
+
+#pw-header-content {
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#pw-content {
+  width:90%;
+  height:550px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:#FFF;  
+}
+
+#pw-footer {
+  width:100%;
+  height:100px;
+  margin: 0;
+  background-color:#eaecf0;
+  border-top: solid 1px #c8ccd1;
+  float: bottom;
+}
+
 </style>
